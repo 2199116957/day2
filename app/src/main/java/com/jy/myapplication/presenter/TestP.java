@@ -1,9 +1,9 @@
 package com.jy.myapplication.presenter;
 
-import com.wf.ds.base.BasePresenter;
-import com.wf.ds.contract.MainContract;
+import com.jy.myapplication.base.BasePresenter;
+import com.jy.myapplication.contract.MainContract;
 
-public class TestP extends BasePresenter<MainContract.IMainView> implements MainContract.IMainPresenter {
+public class TestP extends BasePresenter<MainContract.IMainView> implements MainContract.IMainPrasenter {
 
     @Override
     public void login(String name, String password) {
