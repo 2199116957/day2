@@ -13,20 +13,21 @@ import com.jy.myapplication.contract.MainContract;
 import com.jy.myapplication.model.UserBean;
 import com.jy.myapplication.presenter.MainPresenterImpl;
 
+import java.util.jar.Attributes;
+
 public class LoginActivity extends BaseActivity<MainPresenterImpl> implements MainContract.IMainView {
 
 
-    private EditText editTextTextPersonName;
-    private EditText editTextTextPassword;
+    private EditText name;
+    private EditText pwd;
     @Override
     protected void initData() {
         presenter.login(getUserName(),getpassword());
     }
     @Override
     protected void initView() {
-        editTextTextPersonName.findViewById(R.id.editTextTextPersonName);
-        editTextTextPassword.findViewById(R.id.editTextTextPassword);
-
+        name.findViewById(R.id.et_name);
+        pwd.findViewById(R.id.et_pwd);
     };
 
     @Override
@@ -49,18 +50,16 @@ public class LoginActivity extends BaseActivity<MainPresenterImpl> implements Ma
         }
     }
 
-
     @Override
     public String getUserName() {
-        return editTextTextPersonName.getText().toString();
+        return name.getText().toString();
     }
 
     @Override
     public String getpassword() {
-        return editTextTextPassword.getText().toString();
+        return pwd.getText().toString();
 
     }
-
 
     @Override
     public void getData(UserBean string) {
